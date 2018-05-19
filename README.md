@@ -5,8 +5,8 @@
 ### Zakladne C# API (na vyziadanie)
 ```
  - BusinessJournal.Models.Common
- - BusinessJournal.Model.V1
- - BusinessJournal.Model.V2
+ - BusinessJournal.Models.V1
+ - BusinessJournal.Models.V2
  
  - BusinessJournal.Processing
  - BusinessJournal.Processing.V1
