@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Data
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "License Header", "License Header", "{27087812-0980-41CA-8ACC-89456A7EA2C0}"
 	ProjectSection(SolutionItems) = preProject
-		MalikP.BusinessJournal.sln.licenseheader = MalikP.BusinessJournal.sln.licenseheader
+		Business Journal SR.sln.licenseheader = Business Journal SR.sln.licenseheader
 	EndProjectSection
 EndProject
 Global
