@@ -287,10 +287,10 @@
   </wsdl:binding>
   <wsdl:service name="PodanieExport">
     <wsdl:port name="PodanieExportSoap" binding="tns:PodanieExportSoap">
-      <soap:address location="https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" />
+      <soap:address location="https://www.justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" />
     </wsdl:port>
     <wsdl:port name="PodanieExportSoap12" binding="tns:PodanieExportSoap12">
-      <soap12:address location="https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" />
+      <soap12:address location="https://www.justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

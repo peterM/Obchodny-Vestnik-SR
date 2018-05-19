@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="YBzcpvSnk0J9M27h0c+bgRoLJpY=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="wGyL9CAPPDQjML2+dklHLYviACk=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="PodanieExportSoap">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PodanieExportSoap" contract="JusticeServiceReference.PodanieExportSoap" bindingType="basicHttpBinding" address="https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" bindingConfiguration="PodanieExportSoap">
+    <endpoint name="PodanieExportSoap" contract="JusticeServiceReference.PodanieExportSoap" bindingType="basicHttpBinding" address="https://www.justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" bindingConfiguration="PodanieExportSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx</serializedValue>
+          <serializedValue>https://www.justice.gov.sk/PortalApp/Ws/PodanieExport.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

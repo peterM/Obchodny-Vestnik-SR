@@ -18,10 +18,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://www.justice.gov.sk/PortalApp/Ws/PodanieExport.asmx?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PodanieExport.wsdl" MetadataType="Wsdl" ID="456826ed-f193-4540-b15b-8edcf357e1d1" SourceId="1" SourceUrl="https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx?WSDL" />
+    <MetadataFile FileName="PodanieExport.wsdl" MetadataType="Wsdl" ID="456826ed-f193-4540-b15b-8edcf357e1d1" SourceId="1" SourceUrl="https://www.justice.gov.sk/PortalApp/Ws/PodanieExport.asmx?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
