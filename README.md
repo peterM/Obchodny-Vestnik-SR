@@ -22,7 +22,7 @@
 Jednotlivé vestníky je možne stiahnuť cez službu [TU](https://www.justice.gov.sk/PortalApp/Ws/PodanieExport.asmx).
 
 ### XML Schémy
-Tvorcom ```XML schém``` je spoločnosť [Anasoft]](http://www.anasoft.sk).
+Tvorcom ```XML schém``` je spoločnosť [Anasoft](http://www.anasoft.sk).
 
 ### Prístup k obchodnému vestníku cez API
 O prístup k ```API``` obchodného vestníka je potrebné požiadať [TU](https://www.justice.gov.sk/ObchodnyVestnik/Stranky/Strukturovane-udaje.aspx).
