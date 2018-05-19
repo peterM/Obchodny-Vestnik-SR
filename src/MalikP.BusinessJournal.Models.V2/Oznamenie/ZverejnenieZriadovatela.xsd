@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Zverejnenie zriadovatela rozhodcovskeho sudu
+	Zverejnenie zriadovatela mediacneho centra
+-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+
+  <xs:include schemaLocation="../../v1/Spolocne.xsd" />
+	
+	<xs:element name="ZverejnenieZriadovatela">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zriadovatel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MenoSidlo" type="ov:ObchodneMenoSidlo" />
+              <xs:element name="Ico" type="xs:string" />
+              <xs:element name="WeboveSidlo" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+				</xs:element>
+				
+				<xs:element name="OznamenieDatum" type="xs:dateTime" />
+				
+				<xs:element name="RozhodcovskySud" type="ov:ObchodneMenoSidlo" />
+
+        <xs:element name="ZriadovatelJePravnymNastupcomText" type="xs:string" default="Zriaďovateľ stáleho rozhodcovského súdu je právnym nástupcom zriaďovateľa, ktorý zriadil stály rozhodcovský súd podľa zákona o rozhodcovskom konaní v znení účinnom do 31.12.2014:" />
+        <xs:element name="ZriadovatelJePravnymNastupcom" type="xs:boolean" />
+        <xs:element name="ZriadovatelClenovia" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Zriadovatel">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MenoSidlo" type="ov:ObchodneMenoSidlo" />
+                    <xs:element name="Ico" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RozhodcovskySud" type="ov:ObchodneMenoSidlo" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+				<xs:element name="ZverejnujeZmenu" type="ov:XmlDropDownValue" />
+				
+				<xs:element name="ZverejnujeText" type="xs:string" />
+				<xs:element name="ZverejnujeStatut" type="xs:string" />
+				<xs:element name="ZverejnujeRokovaciPoriadok" type="xs:string" />
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

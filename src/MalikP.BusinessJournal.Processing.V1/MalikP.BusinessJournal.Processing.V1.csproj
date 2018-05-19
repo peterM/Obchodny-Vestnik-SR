@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B50987B3-EAAA-4046-921C-1AD123574210}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MalikP.BusinessJournal.Processing.V1</RootNamespace>
+    <AssemblyName>MalikP.BusinessJournal.Processing.V1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Processors\Drazba\DrazbaSpravcaDane_V1_Processor.cs" />
+    <Compile Include="Processors\Drazba\Drazba_V1_Processor.cs" />
+    <Compile Include="Processors\Drazba\SudniExekutori_V1_Processor.cs" />
+    <Compile Include="Processors\Drazba\SudnyExekutor_V1_Processor.cs" />
+    <Compile Include="Processors\Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekucii_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\EmisnePodmienkyDlhopisovZmeny_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\EmisnePodmienkyDlhopisov_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\HospodarenieSpravaPodielovyFond_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\PredajMajetkuLividator_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\PredajMajetkuSpravca_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\RozhodnutiaOPrivatizacii_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\StatnaPomocIneProgramyPodpory_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\TransformacneProjekty_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\UpisovanieAkcii_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\ValneZhromazdenie_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\VerejnaSutaz_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\VyhlaskySudov_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\VyrocnaSprava_V1_Processor.cs" />
+    <Compile Include="Processors\Ine\VyrokAuditora_V1_Processor.cs" />
+    <Compile Include="Processors\Konkurz\KonkurzARestrukt_V1_Processor.cs" />
+    <Compile Include="Processors\Konkurz\KonkurzyAVyrovnania_V1_Processor.cs" />
+    <Compile Include="Processors\Konkurz\OznameniaSpravcov_V1_Processor.cs" />
+    <Compile Include="Processors\Oprava\OpravaZrusenie_V1_Processor.cs" />
+    <Compile Include="Processors\OR\ORPodanie_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\CennePapiere_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\EuropskeZoskupenieUzemnejSpoluprace_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\OdobratiePovolenia_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\OdsudzujuciRozsudok_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\OznamenieIne_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\OznamenieSpravcovskejSpolocnosti_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\ZlucenieSplynutieProjektuZbierkyListin_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\ZlucenieZbierkyListin_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\ZmenaPravnejFormy_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\ZnizenieZakladnehoImania_V1_Processor.cs" />
+    <Compile Include="Processors\Oznamenie\ZverejnenieZriadovatela_V1_Processor.cs" />
+    <Compile Include="Processors\RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieOznamenieOrganuVerejnejMoci_V1_Processor.cs" />
+    <Compile Include="Processors\RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieProtimonopolnyUrad_V1_Processor.cs" />
+    <Compile Include="Processors\SpecifikaciaPrijatehoPodieluDane\ZverejneniePouzitiaPrijatehoPodieluDane_V1_Processor.cs" />
+    <Compile Include="Processors\UctovnaZavierka\UctovnaZavierkaNepodnikatelia_V1_Processor.cs" />
+    <Compile Include="Processors\UctovnaZavierka\UctovnaZavierkaPodnikateliaIne_V1_Processor.cs" />
+    <Compile Include="Processors\UctovnaZavierka\UctovnaZavierkaPodnikatelia_V1_Processor.cs" />
+    <Compile Include="Processors\UdajeZRegistraRegUradov\UdajZRegistraRegistrovychUradov_V1_Processor.cs" />
+    <Compile Include="Processors\VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocna_V1_Processor.cs" />
+    <Compile Include="Processors\VyzvaLikvidatorov\OznamenieVyzvaLikvidatorov_V1_Processor.cs" />
+    <Compile Include="Processors\Zmluva\OVZmluva_V1_Processor.cs" />
+    <Compile Include="Processors\Zmluva\ZmluvaInformaciaUzavretie_V1_Processor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MalikP.BusinessJournal.Core\MalikP.BusinessJournal.Core.csproj">
+      <Project>{08dfded9-a711-4739-9fb2-3478d839f383}</Project>
+      <Name>MalikP.BusinessJournal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MalikP.BusinessJournal.Models.Common\MalikP.BusinessJournal.Models.Common.csproj">
+      <Project>{5f8d30a4-8447-4dec-ade2-68d2bcf32963}</Project>
+      <Name>MalikP.BusinessJournal.Models.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MalikP.BusinessJournal.Models.V1\MalikP.BusinessJournal.Models.V1.csproj">
+      <Project>{8c596705-1140-4dfe-b2e8-821dff2f3642}</Project>
+      <Name>MalikP.BusinessJournal.Models.V1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MalikP.BusinessJournal.Models\MalikP.BusinessJournal.Models.csproj">
+      <Project>{ec69f7aa-1fb3-4ee7-bbfd-41e911bcf342}</Project>
+      <Name>MalikP.BusinessJournal.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MalikP.BusinessJournal.Processing\MalikP.BusinessJournal.Processing.csproj">
+      <Project>{c9f67c42-010e-436a-8a09-fcaa3058b4b9}</Project>
+      <Name>MalikP.BusinessJournal.Processing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

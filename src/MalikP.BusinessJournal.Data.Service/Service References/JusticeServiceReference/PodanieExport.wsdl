@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://anasoft.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://anasoft.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://anasoft.com/">
+      <s:element name="StiahnutPodaniaOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cislo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rocnik" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StiahnutPodaniaOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StiahnutPodaniaOVResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StiahnutPodaniaOVPodlaTypu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sablonaKod" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="datumZverejneniaOd" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="datumZverejneniaDo" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="StiahnutPodaniaOVPodlaTypuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StiahnutPodaniaOVPodlaTypuResult" type="tns:ArrayOfObchodnyVestnikPodanie" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfObchodnyVestnikPodanie">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObchodnyVestnikPodanie" nillable="true" type="tns:ObchodnyVestnikPodanie" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObchodnyVestnikPodanie">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Znacka" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SablonaKod" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SablonaVerzia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObchodnyVestnik" type="tns:ObchodnyVestnik" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormularUdaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrilohyReferencie" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObchodnyVestnik">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Cislo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rocnik" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DenVydania" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ZiskatZoznamVydanychOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZiskatZoznamVydanychOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZiskatZoznamVydanychOVResult" type="tns:ArrayOfObchodnyVestnik" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfObchodnyVestnik">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObchodnyVestnik" nillable="true" type="tns:ObchodnyVestnik" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ZiskatPoslednyVydanyOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZiskatPoslednyVydanyOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZiskatPoslednyVydanyOVResult" type="tns:ObchodnyVestnik" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SkontrolovatZmenyOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cislo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rocnik" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SkontrolovatZmenyOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SkontrolovatZmenyOVResult" type="tns:ArrayOfObchodnyVestnikKapitola" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfObchodnyVestnikKapitola">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObchodnyVestnikKapitola" nillable="true" type="tns:ObchodnyVestnikKapitola" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObchodnyVestnikKapitola">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nazov" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stav" type="tns:SuborStav" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SuborStav">
+        <s:restriction base="s:string">
+          <s:enumeration value="Zmeneny" />
+          <s:enumeration value="Nezmeneny" />
+          <s:enumeration value="Neznamy" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="StiahnutPodaniaOVSoapIn">
+    <wsdl:part name="parameters" element="tns:StiahnutPodaniaOV" />
+  </wsdl:message>
+  <wsdl:message name="StiahnutPodaniaOVSoapOut">
+    <wsdl:part name="parameters" element="tns:StiahnutPodaniaOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="StiahnutPodaniaOVPodlaTypuSoapIn">
+    <wsdl:part name="parameters" element="tns:StiahnutPodaniaOVPodlaTypu" />
+  </wsdl:message>
+  <wsdl:message name="StiahnutPodaniaOVPodlaTypuSoapOut">
+    <wsdl:part name="parameters" element="tns:StiahnutPodaniaOVPodlaTypuResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZiskatZoznamVydanychOVSoapIn">
+    <wsdl:part name="parameters" element="tns:ZiskatZoznamVydanychOV" />
+  </wsdl:message>
+  <wsdl:message name="ZiskatZoznamVydanychOVSoapOut">
+    <wsdl:part name="parameters" element="tns:ZiskatZoznamVydanychOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZiskatPoslednyVydanyOVSoapIn">
+    <wsdl:part name="parameters" element="tns:ZiskatPoslednyVydanyOV" />
+  </wsdl:message>
+  <wsdl:message name="ZiskatPoslednyVydanyOVSoapOut">
+    <wsdl:part name="parameters" element="tns:ZiskatPoslednyVydanyOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="SkontrolovatZmenyOVSoapIn">
+    <wsdl:part name="parameters" element="tns:SkontrolovatZmenyOV" />
+  </wsdl:message>
+  <wsdl:message name="SkontrolovatZmenyOVSoapOut">
+    <wsdl:part name="parameters" element="tns:SkontrolovatZmenyOVResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PodanieExportSoap">
+    <wsdl:operation name="StiahnutPodaniaOV">
+      <wsdl:input message="tns:StiahnutPodaniaOVSoapIn" />
+      <wsdl:output message="tns:StiahnutPodaniaOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StiahnutPodaniaOVPodlaTypu">
+      <wsdl:input message="tns:StiahnutPodaniaOVPodlaTypuSoapIn" />
+      <wsdl:output message="tns:StiahnutPodaniaOVPodlaTypuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZiskatZoznamVydanychOV">
+      <wsdl:input message="tns:ZiskatZoznamVydanychOVSoapIn" />
+      <wsdl:output message="tns:ZiskatZoznamVydanychOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZiskatPoslednyVydanyOV">
+      <wsdl:input message="tns:ZiskatPoslednyVydanyOVSoapIn" />
+      <wsdl:output message="tns:ZiskatPoslednyVydanyOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SkontrolovatZmenyOV">
+      <wsdl:input message="tns:SkontrolovatZmenyOVSoapIn" />
+      <wsdl:output message="tns:SkontrolovatZmenyOVSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PodanieExportSoap" type="tns:PodanieExportSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StiahnutPodaniaOV">
+      <soap:operation soapAction="http://anasoft.com/StiahnutPodaniaOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StiahnutPodaniaOVPodlaTypu">
+      <soap:operation soapAction="http://anasoft.com/StiahnutPodaniaOVPodlaTypu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZiskatZoznamVydanychOV">
+      <soap:operation soapAction="http://anasoft.com/ZiskatZoznamVydanychOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZiskatPoslednyVydanyOV">
+      <soap:operation soapAction="http://anasoft.com/ZiskatPoslednyVydanyOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkontrolovatZmenyOV">
+      <soap:operation soapAction="http://anasoft.com/SkontrolovatZmenyOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PodanieExportSoap12" type="tns:PodanieExportSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StiahnutPodaniaOV">
+      <soap12:operation soapAction="http://anasoft.com/StiahnutPodaniaOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StiahnutPodaniaOVPodlaTypu">
+      <soap12:operation soapAction="http://anasoft.com/StiahnutPodaniaOVPodlaTypu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZiskatZoznamVydanychOV">
+      <soap12:operation soapAction="http://anasoft.com/ZiskatZoznamVydanychOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZiskatPoslednyVydanyOV">
+      <soap12:operation soapAction="http://anasoft.com/ZiskatPoslednyVydanyOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkontrolovatZmenyOV">
+      <soap12:operation soapAction="http://anasoft.com/SkontrolovatZmenyOV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PodanieExport">
+    <wsdl:port name="PodanieExportSoap" binding="tns:PodanieExportSoap">
+      <soap:address location="https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PodanieExportSoap12" binding="tns:PodanieExportSoap12">
+      <soap12:address location="https://justice.gov.sk/PortalApp/Ws/PodanieExport.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

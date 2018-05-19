@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ZverejneniePouzitiaPrijatehoPodieluDaneSchema" 
+		   attributeFormDefault="unqualified" 
+		   elementFormDefault="qualified" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ZverejneniePouzitiaPrijatehoPodieluDane">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Prijimatel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PravnaForma">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ObchodneMenoNazov" type="xs:string" />
+							<xs:element name="AdresaUlica" type="xs:string" />
+							<xs:element name="AdresaCislo" type="xs:string" />
+							<xs:element name="AdresaMesto" type="xs:string" />
+							<xs:element name="AdresaPsc" type="xs:string" />
+							<xs:element name="ICO" type="xs:string" />
+							<xs:element name="SID" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ZaRok" type="xs:string" />
+				<xs:element name="PrijateVRoku" type="xs:string" />
+				<xs:element name="SumaMena">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="Kod" type="xs:string" use="required" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Pouzitia">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="Pouzitie">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Ucel" type="xs:string" />
+										<xs:element name="Hodnota" type="xs:string" />
+										<xs:element name="Sposob" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="VyrokAuditora" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

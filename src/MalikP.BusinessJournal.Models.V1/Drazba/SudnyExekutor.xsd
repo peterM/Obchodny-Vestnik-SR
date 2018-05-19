@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="zoznam_podani" type="SudniExekutori">
+	</xs:element>
+	
+	<xs:complexType name="SudniExekutori">
+		<xs:sequence>
+			<xs:element name="podanie" type="SudnyExekutor" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SudnyExekutor">
+		<xs:sequence>
+			<xs:element name="hlavicka">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="formular_id" type="xs:int" />
+						<xs:element name="database_id" type="xs:string" />
+						<xs:element name="cislo_ex_konania" type="xs:string" />
+						<xs:element name="typ_drazobnej_vyhlasky" type="xs:int" />
+						<xs:element name="poradie_drazby" type="xs:int" />
+						<xs:element name="drazba_ov_datum" type="xs:string" />
+						<xs:element name="drazba_cislo_ov" type="xs:string" />
+						
+            <xs:element name="exekutor">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="meno" type="xs:string" />
+									<xs:element name="priezvisko" type="xs:string" />
+									<xs:element name="titul" type="xs:string" />
+									<xs:element name="ulica" type="xs:string" />
+									<xs:element name="obec" type="xs:string" />
+									<xs:element name="psc" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+
+            <xs:element name="zastupujuci_exekutor" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="meno" type="xs:string" />
+                  <xs:element name="priezvisko" type="xs:string" />
+                  <xs:element name="titul" type="xs:string" />
+                  <xs:element name="ulica" type="xs:string" />
+                  <xs:element name="obec" type="xs:string" />
+                  <xs:element name="psc" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>            
+            
+						<xs:element name="drazba_datum" type="xs:string" />
+						<xs:element name="drazba_cas" type="xs:string" />
+						<xs:element name="drazba_miesto">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ulica" type="xs:string" />
+									<xs:element name="obec" type="xs:string" />
+									<xs:element name="psc" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="vlastnik" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="meno" type="xs:string" />
+									<xs:element name="sidlo" type="xs:string" />
+									<xs:element name="podiel" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="datum_novy" type="xs:string" />
+						<xs:element name="vyhlasenie_datum" type="xs:string" />
+						<xs:element name="znalecka_hodnota" type="xs:string" />
+						<xs:element name="realna_hodnota" type="xs:string" />
+						<xs:element name="vyska_zabezpeky" type="xs:string" />
+						<xs:element name="cena_typ" type="xs:int" />
+						<xs:element name="sposob_zaplatenia" type="xs:string" />
+						<xs:element name="cislo_bu" type="xs:string" />
+						<xs:element name="najnizsie_podanie" type="xs:string" />
+						<xs:element name="sposob_zaplatenia_np" type="xs:string" />
+						<xs:element name="cislo_bu_np" type="xs:string" />
+						<xs:element name="zavady_na_prevzatie" type="xs:string" />
+						<xs:element name="zavady_uzitky" type="xs:string" />
+						<xs:element name="odovzdanie" type="xs:string" />
+						<xs:element name="ohliadka" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="datum" type="xs:string" />
+									<xs:element name="cas" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ohliadka_miesto" type="xs:string" />
+						<xs:element name="dalsie_info" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="predmet_drazby" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="popis" type="xs:string" />
+						<xs:element name="pocet" type="xs:string" />
+						<xs:element name="hodnota_ks" type="xs:string" />
+						<xs:element name="hodnota_spolu" type="xs:string" />
+						
+						<xs:element name="oznacenie_nehnutelnosti">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="okres" type="xs:string" />
+									<xs:element name="obec" type="xs:string" />
+									<xs:element name="kataster" type="xs:string" />
+									<xs:element name="cislo_lv" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="parcely">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="parcela" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="p_cislo" type="xs:string" />
+												<xs:element name="p_vymera" type="xs:string" />
+												<xs:element name="p_druh" type="xs:string" />
+												<xs:element name="popis" type="xs:string" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="stavby">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="stavba" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="supis_cislo" type="xs:string" />
+												<xs:element name="p_cislo" type="xs:string" />
+												<xs:element name="druh_stavby" type="xs:string" />
+												<xs:element name="popis_stavby" type="xs:string" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="dovod_zrusenia" type="xs:string" />
+			<xs:element name="datum_zrusenia" type="xs:string" />
+			
+			<xs:element name="zmenene_skutocnosti" type="xs:string" />
+			<xs:element name="dovod_zmeny" type="xs:string" />
+			<xs:element name="datum_zmeny" type="xs:string" />
+			
+			<xs:element name="oprava_udajov">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="v_casti" type="xs:string" />
+						<xs:element name="text_stary" type="xs:string" />
+						<xs:element name="text_novy" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="datum_opravy" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

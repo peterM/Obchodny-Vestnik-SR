@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="ZmenaPravnejFormy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="StatutarnyOrgan" type="ov:XmlDropDownValue" />
+        <xs:element name="StatutarnyOrganTyp" type="ov:XmlDropDownValue" />
+				<xs:element name="Konatelia">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Konatel" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Meno" type="ov:CeleMeno" />
+										<xs:element name="Sidlo" type="ov:Sidlo" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+        <xs:element name="KonateliaPO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Spolocnost" type="ov:PravnickaOsoba" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+				<xs:element name="Spolocnost" type="ov:PravnickaOsoba" />
+
+				<xs:element name="ZmenaZ" >
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PravnaForma" type="ov:XmlDropDownValue" />
+							<xs:element name="Spolocnost" type="ov:PravnickaOsoba" />
+							<xs:element name="ZakladneImanie" >
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Suma" type="xs:decimal" />
+										<xs:element name="Mena" type="ov:XmlDropDownValue" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="ZmenaNa" >
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PravnaForma" type="ov:XmlDropDownValue" />
+							<xs:element name="Spolocnost" type="ov:PravnickaOsoba" />
+							<xs:element name="ZakladneImanie" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="ZmenaDatumZapisOR" type="xs:dateTime" />
+				
+				<xs:element name="StatutarnyOrganOznamuje" type="ov:XmlDropDownValue" />
+				<xs:element name="StatutarnyOrganVyzyvaVeritelov" type="ov:XmlDropDownValue" />
+				<xs:element name="Veritel" type="xs:string" />
+				
+				<xs:element name="PohladavkyPrihlasenie" type="ov:ObchodneMenoSidlo" />
+				
+				<xs:element name="PrveZverejnenieOV" nillable="true" >
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Cislo" type="xs:string" />
+							<xs:element name="Datum" type="xs:dateTime" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="SpolocnostVeritelUpovedomenieStatutarnyOrgan" type="ov:XmlDropDownValue" />
+				<xs:element name="SpolocnostVeritelUpovedomenie" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

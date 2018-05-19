@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.gov.sk/form/00166073.MSSR_OV_Upovedomenie_o_exekucii/1.x" xmlns="http://schemas.gov.sk/form/00166073.MSSR_OV_Upovedomenie_o_exekucii/1.x">
+  <xs:simpleType name="TitlePrefix">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringText255RequiredType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value=".{1,255}" />
+      <xs:minLength value="1" />
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Affix">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringText50Type">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProposalMethod">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringTextAreaType">
+    <xs:restriction base="xs:string">
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="YesNoType">
+    <xs:restriction base="xs:boolean">
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:element name="MSSR_OV_Upovedomenie_o_exekucii">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Executor" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Prefix" type="TitlePrefix" minOccurs="0" nillable="true" />
+              <xs:element name="GivenName" type="StringText255RequiredType" minOccurs="1" />
+              <xs:element name="FamilyName" type="StringText255RequiredType" minOccurs="1" />
+              <xs:element name="Affix" type="Affix" minOccurs="0" nillable="true" />
+              <xs:element name="PhysicalAddress" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="StreetName" type="StringText255RequiredType" minOccurs="1" />
+                    <xs:element name="BuildingNumber" type="StringText50Type" minOccurs="1" />
+                    <xs:element name="Municipality" type="StringText255RequiredType" minOccurs="1" />
+                    <xs:element name="PostalCode" type="StringText50Type" minOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Contact" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="TelephoneNumber" type="StringText255RequiredType" minOccurs="1" />
+                    <xs:element name="Email" type="StringText255RequiredType" minOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Obligatory" minOccurs="1" maxOccurs="200">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ObligatoryName" type="StringText255RequiredType" minOccurs="1" />
+              <xs:element name="ObligatoryId" type="StringText50Type" minOccurs="1" />
+              <xs:element name="ObligatoryPhysicalAddress" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ObligatoryStreetName" type="StringText255RequiredType" minOccurs="1" />
+                    <xs:element name="ObligatoryBuildingNumber" type="StringText50Type" minOccurs="1" />
+                    <xs:element name="ObligatoryMunicipality" type="StringText255RequiredType" minOccurs="1" />
+                    <xs:element name="ObligatoryPostalCode" type="StringText50Type" minOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Other" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FileReferenceEx" type="StringText255RequiredType" minOccurs="1" />
+              <xs:element name="ProposalMethod" type="ProposalMethod" minOccurs="1" />
+              <xs:element name="Text" type="StringTextAreaType" minOccurs="0" nillable="true" />
+              <xs:element name="InternalField1" type="YesNoType" minOccurs="0" nillable="true" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

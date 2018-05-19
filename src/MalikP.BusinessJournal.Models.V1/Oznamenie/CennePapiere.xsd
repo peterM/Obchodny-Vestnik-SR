@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="CennePapiere">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Emitent" type="ov:PravnickaOsoba" />
+							
+				<xs:element name="PredlozenieVratenie">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LehotaOd" type="xs:dateTime" />
+							<xs:element name="LehotaDo" type="xs:dateTime" />
+							<xs:element name="Adresa" type="ov:Sidlo" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Vyzdvihnutie">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DatumOd" type="xs:dateTime" />
+							<xs:element name="DatumDo" type="xs:dateTime" />
+							<xs:element name="Adresa" type="ov:Sidlo" />
+							<xs:element name="PracovneDni" type="xs:string" />
+							<xs:element name="Cas" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="ZmenaPodoby">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RozhodnutieZaklad" type="xs:string" />
+							<xs:element name="RozhodnutieDatum" type="xs:dateTime" />
+							<xs:element name="PobodobaZ" type="ov:XmlDropDownValue" />
+							<xs:element name="PobodobaNa" type="ov:XmlDropDownValue" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="IneOznamenie">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Paragraf" type="xs:string" />
+							<xs:element name="ZverejnujeText" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

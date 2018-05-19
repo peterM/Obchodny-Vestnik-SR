@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+
+	<xs:include schemaLocation="../../v1/Spolocne.xsd" />
+
+	<xs:element name="OpravaZrusenie">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="VyhlasovatelTyp" type="ov:XmlDropDownValue" />
+        
+				<!-- Pravnicka osoba, Fyzicka osoba - podnikatel -->
+				<xs:element name="VyhlasovatelPO" nillable="true" >
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MenoSidlo" type="ov:ObchodneMenoSidlo" />              
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="VyhlasovatelFO" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Meno" type="ov:CeleMeno" />
+							<xs:element name="Sidlo" type="ov:Sidlo" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="Ico" type="xs:string" />
+				
+				<xs:element name="OV" type="xs:string" />
+				<xs:element name="DatumVydania" type="xs:string" />
+				<xs:element name="PodanieKapitola" type="ov:XmlDropDownValue" />
+				<xs:element name="PodanieTyp" type="ov:XmlDropDownValue" />
+        <xs:element name="SID" type="xs:string" />
+        <xs:element name="ZverejnenieCislo" type="xs:string" />
+				
+				<xs:element name="Subjekt" type="xs:string" />
+				<xs:element name="ZverejnujeText" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

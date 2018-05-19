@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../../v1/Spolocne.xsd" />
+	
+	<xs:element name="StatnaPomocIneProgramyPodpory">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Poskytovatel" type="ov:ObchodneMenoSidlo" minOccurs="1" maxOccurs="unbounded" />
+				<xs:element name="Vyhlasovatel" type="ov:ObchodneMenoSidlo" minOccurs="1" maxOccurs="unbounded" />
+				<xs:element name="Vykonavatel" type="ov:ObchodneMenoSidlo"  minOccurs="1" maxOccurs="unbounded" />
+				
+				<xs:element name="ZverejnujeTextTyp" type="xs:string" />
+				<xs:element name="ZverejnujeText" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

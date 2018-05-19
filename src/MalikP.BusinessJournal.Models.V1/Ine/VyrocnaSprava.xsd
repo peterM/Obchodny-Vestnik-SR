@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+
+	<xs:include schemaLocation="../Spolocne.xsd" />
+
+	<xs:element name="VyrocnaSprava">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MenoSidlo" type="ov:ObchodneMenoSidlo" />
+				<xs:element name="Ico" type="xs:string" />
+				<xs:element name="Rok" type="xs:string" />
+				<xs:element name="ZverejnujeText" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

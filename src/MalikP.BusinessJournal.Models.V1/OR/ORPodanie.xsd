@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="ORPodania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SudKod" type="xs:string" />
+        <xs:element name="SudNazov" type="xs:string" />
+        <xs:element name="TypKod" type="xs:string" />
+        <xs:element name="TypNazov" type="xs:string" />
+        
+        <xs:element name="ORPodanie" type="ORPodanie" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="ORPodanie" type="ORPodanie" />
+
+  <xs:complexType name="ORPodanie">
+    <xs:sequence>
+      <xs:element name="ORZnacka" type="xs:string" />
+      <xs:element name="SudKod" type="xs:string" />
+      <xs:element name="SudNazov" type="xs:string" />
+      <xs:element name="TypKod" type="xs:string" />
+      <xs:element name="TypNazov" type="xs:string" />
+      <xs:element name="TextPodania" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

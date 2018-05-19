@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="RozhodnutieProtimonopolnyUrad">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Sidlo" type="ov:Sidlo"  />
+				<xs:element name="RozhodnutieTyp" type="ov:XmlDropDownValue" />
+				
+				<xs:element name="PravoplatneRozhodnutia" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PravoplatneRozhodnutie" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Cislo" type="xs:string" />
+										<xs:element name="Datum" type="xs:dateTime" />
+										<xs:element name="Text" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="OznameniaOKoncentracii" nillable="true" type="xs:string" />
+				<xs:element name="ZacateKonania" nillable="true" type="xs:string" />
+
+        <xs:element name="PodlaZakona" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

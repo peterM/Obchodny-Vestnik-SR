@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KonkurzyAVyrovnania"
+		   attributeFormDefault="unqualified"
+		   elementFormDefault="qualified"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="KonkurzyAVyrovnania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="KrajskySud">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="Kod" type="xs:string" use="required" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SpisovaZnacka" type="xs:string" />
+        <xs:element name="ObchodneMenoNazov" type="xs:string" />
+        <xs:element name="Ico" type="xs:string" />
+        <xs:element name="Sidlo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ulica" type="xs:string" />
+              <xs:element name="Cislo" type="xs:string" />
+              <xs:element name="Obec" type="xs:string" />
+              <xs:element name="Psc" type="xs:string" />
+              <xs:element name="Stat" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ZverejnujeTyp">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="Kod" type="xs:string" use="required" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SudZverejnuje" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

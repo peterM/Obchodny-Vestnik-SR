@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="ValneZhromazdenie">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ZvolavaKto" type="xs:string" />
+				<xs:element name="Spolocnost" type="ov:PravnickaOsoba" />
+				<xs:element name="ZvolavaCo" type="ov:XmlDropDownValue" />
+				
+				<xs:element name="Datum" type="xs:dateTime" />
+				<xs:element name="Cas" type="xs:string" />
+				
+				
+				<xs:element name="Adresa" type="ov:ObchodneMenoSidlo" />
+				
+				<xs:element name="Program" type="xs:string" />
+				<xs:element name="UplatneniePravaUcasti" type="xs:dateTime" />
+				<xs:element name="DoplnujuceUdaje" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

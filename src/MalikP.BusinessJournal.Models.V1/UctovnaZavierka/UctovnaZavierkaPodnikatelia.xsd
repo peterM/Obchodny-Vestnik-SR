@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="UctovnaZavierkaPodnikatelia">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Hlavicka">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ObchodneMeno" type="xs:string" />
+							<xs:element name="Sidlo">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Ulica" type="xs:string" />
+										<xs:element name="Cislo" type="xs:string" />
+										<xs:element name="Obec" type="xs:string" />
+										<xs:element name="Psc" type="xs:string" />
+										<xs:element name="Stat" type="xs:string" nillable="true" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ICO" type="xs:string" />
+							<xs:element name="Zverejnuje">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ZaObdobieOd" type="xs:date" />
+							<xs:element name="ZaObdobieDo" type="xs:date" />
+							<xs:element name="VSuma">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="MusiBytOverenaAuditorom" type="xs:boolean" nillable="true" />
+							<xs:element name="NazorAuditora">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="IneSkutocnosti" type="xs:string" />
+							<xs:element name="AdresaZverejnenia" type="xs:string" />
+							<xs:element name="SuvahaFormular">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="StranaAktiv">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="Riadok">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Oznacenie" type="xs:string" />
+										<xs:element name="Text" type="xs:string" />
+										<xs:element name="Cislo" type="xs:int" />
+										<xs:element name="Data11" type="xs:decimal" nillable="true" />
+										<xs:element name="Data12" type="xs:decimal" nillable="true" />
+										<xs:element name="Data2" type="xs:decimal" nillable="true" />
+										<xs:element name="Data3" type="xs:decimal" nillable="true" />
+										<xs:element name="Validacia" type="xs:string" nillable="true" />
+									</xs:sequence>
+									<xs:attribute name="Bold" type="xs:boolean" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StranaAktivVolnyText" type="xs:string" />
+				
+				<xs:element name="StranaPasiv">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="Riadok">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Oznacenie" type="xs:string" />
+										<xs:element name="Text" type="xs:string" />
+										<xs:element name="Cislo" type="xs:int" />
+										<xs:element name="Data4" type="xs:decimal" nillable="true" />
+										<xs:element name="Data5" type="xs:decimal" nillable="true" />
+									</xs:sequence>
+									<xs:attribute name="Bold" type="xs:boolean" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="StranaPasivVolnyText" type="xs:string" />
+				
+				<xs:element name="VykazZiskovStrat">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="Riadok">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Oznacenie" type="xs:string" />
+										<xs:element name="Text" type="xs:string" />
+										<xs:element name="Cislo" type="xs:int" />
+										<xs:element name="Data1" type="xs:decimal" nillable="true" />
+										<xs:element name="Data2" type="xs:decimal" nillable="true" />
+									</xs:sequence>
+									<xs:attribute name="Bold" type="xs:boolean" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="VykazZiskovStratVolnyText" type="xs:string" />
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

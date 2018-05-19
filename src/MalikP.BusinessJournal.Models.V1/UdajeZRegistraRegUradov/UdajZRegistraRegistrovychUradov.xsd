@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UdajZRegistraRegistrovychUradov">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="URAD" type="xs:string" minOccurs="0" />
+        <xs:element name="TYP_POHYBU" type="xs:string" minOccurs="0" />
+        <xs:element name="NF_NO" type="xs:string" minOccurs="0" />
+        <xs:element name="NAZOV_NF_NO" type="xs:string" minOccurs="0" />
+        <xs:element name="NAZOV" type="xs:string" minOccurs="0" />
+        <xs:element name="SIDLO" type="xs:string" minOccurs="0" />
+        <xs:element name="ICO" type="xs:string" minOccurs="0" />
+        <xs:element name="DATUM_VZNIKU" type="xs:string" minOccurs="0" />
+        <xs:element name="DATUM_PLATNOSTI" type="xs:string" minOccurs="0" />
+        <xs:element name="UCEL" type="xs:string" minOccurs="0" />
+        <xs:element name="STATUTAR" type="xs:string" minOccurs="0" />
+        <xs:element name="ZRIADOVATEL" type="xs:string" minOccurs="0" />
+        <xs:element name="VKLAD_ZRIADOVATELOV_PENAZNY" type="xs:string" minOccurs="0" />
+        <xs:element name="SPLATENY_VKLAD_PENAZNY" type="xs:string" minOccurs="0" />
+        <xs:element name="VKLAD_ZRIADOVATELOV_NEPENAZNY" type="xs:string" minOccurs="0" />
+        <xs:element name="PRIORITNY_MAJETOK" type="xs:string" minOccurs="0" />
+        <xs:element name="DATUM_ZAPISU" type="xs:string" minOccurs="0" />
+        <xs:element name="ZMENA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="DRUH_ZMENY" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

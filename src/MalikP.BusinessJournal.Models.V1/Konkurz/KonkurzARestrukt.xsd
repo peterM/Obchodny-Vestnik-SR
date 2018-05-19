@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="KonkurzARestrukt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ID" type="xs:unsignedInt" />
+        <xs:element name="Autor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sud" type="xs:string" />
+              <xs:element name="SpisovaZnacka" type="xs:string" />
+              <xs:element name="ICS" type="xs:string" />
+              <xs:element name="Vydal" type="xs:string" />
+              <xs:element name="VydalFN" type="xs:string" />
+              <xs:element name="Odoslal" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DatumVydania" type="xs:string" />
+        <xs:element name="Dlznik">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nazov" type="xs:string" />
+              <xs:element name="ICO"  type="xs:string" />
+              <xs:element name="Ulica" type="xs:string" />
+              <xs:element name="CisloUl" type="xs:string" />
+              <xs:element name="Obec" type="xs:string" />
+              <xs:element name="Psc" type="xs:string" />
+              <xs:element name="Stat" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Navrhovatelia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Navrhovatel">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Nazov" type="xs:string" />
+                    <xs:element name="ICO" type="xs:string"  />
+                    <xs:element name="Ulica" type="xs:string" />
+                    <xs:element name="CisloUl" type="xs:string" />
+                    <xs:element name="Obec" type="xs:string" />
+                    <xs:element name="Psc" type="xs:string" />
+                    <xs:element name="Stat" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Spravcovia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Spravca">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Nazov" type="xs:string" />
+                    <xs:element name="ICO" type="xs:string"  />
+                    <xs:element name="Ulica" type="xs:string" />
+                    <xs:element name="CisloUl" type="xs:string" />
+                    <xs:element name="Obec" type="xs:string" />
+                    <xs:element name="Psc" type="xs:string" />
+                    <xs:element name="Stat" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Text">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Druh" type="xs:string" />
+              <xs:element name="Hlavicka" type="xs:string" />
+              <xs:element name="Rozhodnutie" type="xs:string" />
+              <xs:element name="Odovodnenie" type="xs:string" />
+              <xs:element name="Poucenie" type="xs:string" />
+              <xs:element name="Oznam" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

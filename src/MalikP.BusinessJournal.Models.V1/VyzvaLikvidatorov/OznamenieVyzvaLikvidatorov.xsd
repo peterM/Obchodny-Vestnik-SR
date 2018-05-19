@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="OznamenieVyzvaLikvidatorov">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Likvidatori">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LikvidatorTyp" type="ov:XmlDropDownValue" />
+							<xs:element name="LikvidatorFO" type="ov:LikvidatorFO" maxOccurs="unbounded" nillable="true" />
+							<xs:element name="LikvidatorPO" nillable="true">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ObchodneMenoNazov" type="xs:string" />
+										<xs:element name="Sidlo" type="ov:Sidlo" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Podnik">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PravnaForma" type="ov:XmlDropDownValue" />
+              <xs:element name="PravnaFormaIne" type="xs:string" />
+
+              <xs:element name="UdajeStatnyPodnik" type="ov:PravnickaOsoba" nillable="true" />
+							
+							<xs:element name="Udaje" type="ov:ObchodneMenoSidlo" />
+							<xs:element name="Ico" type="xs:string" />
+							<xs:element name="Sid" type="xs:string" />
+							<xs:element name="ZapisRegister" type="ov:ZapisRegister" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="RozhodnutieNaZaklade" type="xs:string" />
+				<xs:element name="RozhodnutieDatum" type="xs:date" />
+				<xs:element name="RozhodnutieDatumZaciatkuLikvidacie" type="xs:date" />
+				
+				<xs:element name="VeritelPravnaForma" type="ov:XmlDropDownValue" />
+				
+				<xs:element name="PohladavkyLehota" type="xs:string" />
+				<xs:element name="PohladavkyAdresaTyp" type="ov:XmlDropDownValue" />
+				<xs:element name="PohladavkyAdresaFO" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CeleMeno" type="ov:CeleMeno" />
+							<xs:element name="Bydlisko" type="ov:Sidlo" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PohladavkyAdresaPO" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ObchodneMenoNazov" type="xs:string" />
+							<xs:element name="Sidlo" type="ov:Sidlo" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="LikvidatorFO">
+		<xs:sequence>
+			<xs:element name="CeleMeno" type="ov:CeleMeno" />
+			<xs:element name="Bydlisko" type="ov:Sidlo" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="OznameniaSpravcov">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Upadca">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ObchodneMenoNazov" type="xs:string" />
+							<xs:element name="Sidlo" type="ov:Sidlo"  />
+							<xs:element name="Ico" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Spravca">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Typ" type="ov:XmlDropDownValue" />
+							
+							<xs:element name="CeleMeno" type="ov:CeleMeno" />
+							<xs:element name="ObchodneMenoNazov" type="xs:string" />
+							
+							<xs:element name="Sidlo" type="ov:Sidlo" />
+							<xs:element name="Kontakt" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SpisovaZnackaSpravcovskehoSpisu" type="xs:string" />
+        <xs:element name="Sud" type="ov:XmlDropDownValue" nillable="true" />
+				<xs:element name="SpisovaZnackaSudnehoSpisu" type="xs:string" />
+				<xs:element name="DruhPodania">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="Kod" type="xs:string" use="required" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TextPodania" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

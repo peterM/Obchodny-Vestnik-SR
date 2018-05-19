@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="EuropskeZoskupenieUzemnejSpoluprace">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RiaditelMeno" type="ov:CeleMeno" />
+				<xs:element name="RiaditelPobyt" type="ov:Sidlo" />
+				
+				<xs:element name="Zoskupenie" type="ov:ObchodneMenoSidlo" />
+				<xs:element name="ZoskupenieIco" type="xs:string" />
+				<xs:element name="ZoskupenieCiele" type="xs:string" />
+				
+				<xs:element name="Clenovia">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Clen" type="ov:ObchodneMenoSidlo" minOccurs="1" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Datum" type="xs:dateTime" />
+				<xs:element name="ZmenaText" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

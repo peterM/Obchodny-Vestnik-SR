@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Models.Common", "MalikP.BusinessJournal.Models.Common\MalikP.BusinessJournal.Models.Common.csproj", "{5F8D30A4-8447-4DEC-ADE2-68D2BCF32963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Models.V1", "MalikP.BusinessJournal.Models.V1\MalikP.BusinessJournal.Models.V1.csproj", "{8C596705-1140-4DFE-B2E8-821DFF2F3642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Models.V2", "MalikP.BusinessJournal.Models.V2\MalikP.BusinessJournal.Models.V2.csproj", "{8093A72D-A4E4-4922-967A-2DA7DCF26FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Processing", "MalikP.BusinessJournal.Processing\MalikP.BusinessJournal.Processing.csproj", "{C9F67C42-010E-436A-8A09-FCAA3058B4B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Processing.V1", "MalikP.BusinessJournal.Processing.V1\MalikP.BusinessJournal.Processing.V1.csproj", "{B50987B3-EAAA-4046-921C-1AD123574210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Processing.V2", "MalikP.BusinessJournal.Processing.V2\MalikP.BusinessJournal.Processing.V2.csproj", "{214341D3-0ECB-4702-8636-D2567CE4BEFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Models", "MalikP.BusinessJournal.Models\MalikP.BusinessJournal.Models.csproj", "{EC69F7AA-1FB3-4EE7-BBFD-41E911BCF342}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Core", "MalikP.BusinessJournal.Core\MalikP.BusinessJournal.Core.csproj", "{08DFDED9-A711-4739-9FB2-3478D839F383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalikP.BusinessJournal.Data.Service", "MalikP.BusinessJournal.Data.Service\MalikP.BusinessJournal.Data.Service.csproj", "{2035EDEF-1A21-46A4-A4CC-DFAF0EF4F64F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "License Header", "License Header", "{27087812-0980-41CA-8ACC-89456A7EA2C0}"
+	ProjectSection(SolutionItems) = preProject
+		MalikP.BusinessJournal.sln.licenseheader = MalikP.BusinessJournal.sln.licenseheader
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F8D30A4-8447-4DEC-ADE2-68D2BCF32963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8D30A4-8447-4DEC-ADE2-68D2BCF32963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8D30A4-8447-4DEC-ADE2-68D2BCF32963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8D30A4-8447-4DEC-ADE2-68D2BCF32963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C596705-1140-4DFE-B2E8-821DFF2F3642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C596705-1140-4DFE-B2E8-821DFF2F3642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C596705-1140-4DFE-B2E8-821DFF2F3642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C596705-1140-4DFE-B2E8-821DFF2F3642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8093A72D-A4E4-4922-967A-2DA7DCF26FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8093A72D-A4E4-4922-967A-2DA7DCF26FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8093A72D-A4E4-4922-967A-2DA7DCF26FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8093A72D-A4E4-4922-967A-2DA7DCF26FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9F67C42-010E-436A-8A09-FCAA3058B4B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F67C42-010E-436A-8A09-FCAA3058B4B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F67C42-010E-436A-8A09-FCAA3058B4B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F67C42-010E-436A-8A09-FCAA3058B4B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B50987B3-EAAA-4046-921C-1AD123574210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50987B3-EAAA-4046-921C-1AD123574210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50987B3-EAAA-4046-921C-1AD123574210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50987B3-EAAA-4046-921C-1AD123574210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214341D3-0ECB-4702-8636-D2567CE4BEFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214341D3-0ECB-4702-8636-D2567CE4BEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214341D3-0ECB-4702-8636-D2567CE4BEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214341D3-0ECB-4702-8636-D2567CE4BEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC69F7AA-1FB3-4EE7-BBFD-41E911BCF342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC69F7AA-1FB3-4EE7-BBFD-41E911BCF342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC69F7AA-1FB3-4EE7-BBFD-41E911BCF342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC69F7AA-1FB3-4EE7-BBFD-41E911BCF342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08DFDED9-A711-4739-9FB2-3478D839F383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DFDED9-A711-4739-9FB2-3478D839F383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DFDED9-A711-4739-9FB2-3478D839F383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DFDED9-A711-4739-9FB2-3478D839F383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2035EDEF-1A21-46A4-A4CC-DFAF0EF4F64F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2035EDEF-1A21-46A4-A4CC-DFAF0EF4F64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2035EDEF-1A21-46A4-A4CC-DFAF0EF4F64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2035EDEF-1A21-46A4-A4CC-DFAF0EF4F64F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC910392-C04A-4F81-B411-FDA0FC7520A6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+	<xs:complexType name="XmlDropDownValue">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="Kod" type="xs:string" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="Sidlo">
+		<xs:sequence>
+			<xs:element name="Ulica" type="xs:string" />
+			<xs:element name="Cislo" type="xs:string" />
+			<xs:element name="Obec" type="xs:string" />
+			<xs:element name="Psc" type="xs:string" />
+			<xs:element name="Stat" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="CeleMeno">
+		<xs:sequence>
+			<xs:element name="TitulPred" type="xs:string" />
+			<xs:element name="TitulZa" type="xs:string" />
+			<xs:element name="Meno" type="xs:string" />
+			<xs:element name="Priezvisko" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ObchodneMenoSidlo">
+		<xs:sequence>
+			<xs:element name="ObchodneMenoNazov" type="xs:string" />
+			<xs:element name="Sidlo" type="Sidlo"  />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ZapisRegister">
+		<xs:sequence>
+			<xs:element name="JeObchodnyRegister" type="xs:boolean" />
+			<xs:element name="OrSud" type="XmlDropDownValue" />
+			<xs:element name="OrOddiel" type="xs:string" />
+			<xs:element name="OrVlozka" type="xs:string" />
+			<xs:element name="InyRegistrovana" type="xs:string" />
+			<xs:element name="InyRegistracneCislo" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="PravnickaOsoba">
+		<xs:sequence>
+			<xs:element name="ObchodneMenoNazov" type="xs:string" />
+			<xs:element name="Sidlo" type="Sidlo"  />
+			<xs:element name="Sud" type="XmlDropDownValue" />
+			<xs:element name="Oddiel" type="xs:string" />
+			<xs:element name="Vlozka" type="xs:string" />
+			<xs:element name="Ico" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

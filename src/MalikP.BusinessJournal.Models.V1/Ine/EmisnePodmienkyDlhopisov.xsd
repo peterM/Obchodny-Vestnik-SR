@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="EmisnePodmienkyDlhopisov">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EmitentTyp" type="ov:XmlDropDownValue" />
+				
+				<xs:element name="EmitentTuzemecPO" nillable="true" type="ov:PravnickaOsoba" />
+				
+				<xs:element name="EmitentTuzemecFO" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Meno" type="ov:CeleMeno" />
+							<xs:element name="RegisterZapis" type="ov:PravnickaOsoba" minOccurs="1" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="EmitentCudzozemecPO" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ObchodneMenoNazov" type="xs:string" />
+							<xs:element name="Sidlo" type="ov:Sidlo"  />
+							<xs:element name="RegisterCislo" type="xs:string" />
+							<xs:element name="RegistrovanyV" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+        <xs:element name="ZverejnujeNadpis" type="xs:string" />
+				<xs:element name="ZverejnujeTyp" type="ov:XmlDropDownValue" />
+				<xs:element name="ZverejnujeText" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

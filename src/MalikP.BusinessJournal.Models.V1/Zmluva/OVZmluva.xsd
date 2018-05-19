@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="OVZmluva">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Vseobecne">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EvidencneCislo" type="xs:string" />
+							<xs:element name="CisloSpisuVReg" type="xs:string" />
+							<xs:element name="KoncovyOdberatel" type="xs:string"/>
+							<xs:element name="Nazov" type="xs:string" />
+							<xs:element name="Predmet" type="xs:string" />
+							<xs:element name="HodnotaPlnenia" type="xs:string" />
+							<xs:element name="HodnotaPlneniaMena">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="HodnotaPlneniaDph">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+              <xs:element name="HodnotaPlneniaSpecifikacia" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="Zmluva">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Stav">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Druh">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Typ">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PravnyRezim">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Garant" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+
+				<xs:element name="Dodatok">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Stav">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PravnyRezim">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="EvidencneCisloRodic" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Dodavatel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ObchodneMenoNazov" type="xs:string" />
+							<xs:element name="AdresaUlica" type="xs:string" />
+							<xs:element name="AdresaMesto" type="xs:string" />
+							<xs:element name="AdresaStat" type="xs:string" />
+							<xs:element name="PravnaForma">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PravnaFormaIne" type="xs:string" />
+							<xs:element name="SudRegistracie">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ICO" type="xs:string" />
+							<xs:element name="DRC" type="xs:string" />
+							<xs:element name="CisloUctu" type="xs:string" />
+							<xs:element name="DoplnInformacia" type="xs:string" />
+							<xs:element name="OsobaMeno" type="xs:string" />
+							<xs:element name="OsobaPriezvisko" type="xs:string" />
+							<xs:element name="OsobaFunkcia" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Odberatel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ObchodneMenoNazov" type="xs:string" />
+							<xs:element name="AdresaUlica" type="xs:string" />
+							<xs:element name="AdresaMesto" type="xs:string" />
+							<xs:element name="AdresaStat" type="xs:string" />
+							<xs:element name="PravnaForma">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PravnaFormaIne" type="xs:string" />
+							<xs:element name="SudRegistracie">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ICO" type="xs:string" />
+							<xs:element name="DRC" type="xs:string" />
+							<xs:element name="CisloUctu" type="xs:string" />
+							<xs:element name="DoplnInformacia" type="xs:string" />
+							<xs:element name="OsobaMeno" type="xs:string" />
+							<xs:element name="OsobaPriezvisko" type="xs:string" />
+							<xs:element name="OsobaFunkcia" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="Ostatne">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DatumUzavretia" type="xs:dateTime" />
+							<xs:element name="DenSuhlasu" type="xs:dateTime" />
+							<xs:element name="DoplnInformacia" type="xs:string" />
+							<xs:element name="VypovednaDoba" type="xs:string" />
+							<xs:element name="SposobObstaravania">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="DoplnkyNavysenie" type="xs:string" />
+							<xs:element name="ObchodneTajomstvo">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ZavazneZnenie">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Kod" type="xs:string" use="required" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

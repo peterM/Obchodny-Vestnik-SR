@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+	Zverejnenie zriadovatela rozhodcovskeho sudu
+	Zverejnenie zriadovatela mediacneho centra
+-->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="ZverejnenieZriadovatela">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Zriadovatel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Typ" type="ov:XmlDropDownValue" />
+							<xs:element name="ZriadovatelFO" nillable="true">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Meno" type="ov:CeleMeno" />
+										<xs:element name="Bydlisko" type="ov:Sidlo" />
+										<xs:element name="Ico" type="xs:string" nillable="true" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ZriadovatelPO" nillable="true">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="MenoSidlo" type="ov:ObchodneMenoSidlo" />
+										<xs:element name="Ico" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+        
+        <xs:element name="IcoMediacnychCentier" type="xs:string" />
+        <xs:element name="EvidencneCisloMediacnehoCentra" type="xs:string" />
+        
+				<xs:element name="OznamenieDatum" type="xs:dateTime" />
+				
+				<xs:element name="Institucia" type="ov:ObchodneMenoSidlo" />        
+				<xs:element name="Pobocky" type="ov:ObchodneMenoSidlo" maxOccurs="unbounded" />
+				
+				<xs:element name="ZverejnujeZmenu" type="ov:XmlDropDownValue" />
+				
+				<xs:element name="ZverejnujeText" type="xs:string" />
+				<xs:element name="ZverejnujeStatut" type="xs:string" />
+				<xs:element name="ZverejnujeRokovaciPoriadok" type="xs:string" />
+				
+				<xs:element name="Rozhodcovia">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Rozhodca" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Meno" type="ov:CeleMeno" />
+										<xs:element name="Sidlo" type="ov:Sidlo" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RozhodcoviaText" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

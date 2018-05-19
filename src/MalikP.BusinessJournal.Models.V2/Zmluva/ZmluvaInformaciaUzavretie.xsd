@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+
+  <xs:include schemaLocation="../../v1/Spolocne.xsd" />
+
+  <xs:element name="ZmluvaInformaciaUzavretie">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Nazov" type="xs:string" />
+				<xs:element name="Predmet" type="xs:string" />
+				<xs:element name="HodnotaPlnenia" type="xs:string" />
+				<xs:element name="HodnotaPlneniaMena" type="ov:XmlDropDownValue" />
+
+        <xs:element name="DodavatelTyp" type="xs:string" />
+        <xs:element name="Dodavatel" type="ov:ObchodneMenoSidlo" />
+        <xs:element name="DodavatelFO" type="ov:CeleMeno" />
+				<xs:element name="DodavatelIco" type="xs:string" />
+
+        <xs:element name="OdberatelTyp" type="xs:string" />
+        <xs:element name="Odberatel" type="ov:ObchodneMenoSidlo" />
+        <xs:element name="OdberatelFO" type="ov:CeleMeno" />
+        <xs:element name="OdberatelIco" type="xs:string" />
+				
+				<xs:element name="DatumUzavretia" type="xs:date" nillable="true" />
+				<xs:element name="DatumUdeleniaSuhlasu" type="xs:date" nillable="true" />
+				<xs:element name="DatumUcinnosti" type="xs:date" nillable="true" />
+				<xs:element name="DatumSkonceniaPlatnosti" type="xs:date" nillable="true" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

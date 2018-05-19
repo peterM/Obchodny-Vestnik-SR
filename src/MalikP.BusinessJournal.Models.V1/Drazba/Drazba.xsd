@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+		   targetNamespace="/PortalJustice/XmlFormularObchodnyVestnik/"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+		   xmlns:ov="/PortalJustice/XmlFormularObchodnyVestnik/">
+	
+	<xs:include schemaLocation="../Spolocne.xsd" />
+	
+	<xs:element name="Drazba">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Cislo" type="xs:string" />
+				<xs:element name="ZoDna" type="xs:date" nillable="true" />
+				
+				<xs:element name="Drazobnik" type="ov:PravnickaOsoba" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Navrhovatelia" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Navrhovatel" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Id" type="xs:int" />
+										<xs:element name="CeleMeno" type="ov:PravnickaOsoba" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Licitatori" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Licitator" minOccurs="1" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Id" type="xs:int" />
+										<xs:element name="CeleMeno" type="ov:PravnickaOsoba" minOccurs="1" maxOccurs="1" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Notar" nillable="true" minOccurs="0" maxOccurs="1" >
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CeleMeno" type="ov:CeleMeno" minOccurs="1" maxOccurs="1" />
+							<xs:element name="Sidlo" type="ov:Sidlo" minOccurs="1" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="KonanieMiesto" type="xs:string" />
+				<xs:element name="KonanieDatum" type="xs:date" />
+				<xs:element name="KonanieCas" type="xs:string" />
+				
+				<xs:element name="Kolo" type="xs:string" />
+				
+				<xs:element name="Predmet" type="xs:string" />
+				<xs:element name="PredmetOpis" type="xs:string" nillable="true"  />
+				<xs:element name="PredmetStavOpis" type="xs:string" nillable="true"  />
+				<xs:element name="PredmetPravaZavazky" type="xs:string" nillable="true"  />
+				<xs:element name="PredmetCenaOdhad" type="xs:string" nillable="true"  />
+				<xs:element name="PredmetCenaVyska" type="xs:string" nillable="true"  />
+				<xs:element name="PredmetCenaSposobStanovenia" type="xs:string" nillable="true"  />
+				<xs:element name="PredmetPodmienkyOdovzdania" type="xs:string" nillable="true" />
+				
+				<xs:element name="NajnizsiePodanie" type="xs:string" nillable="true"  />
+				<xs:element name="NajvyssiePodanie" type="xs:string" nillable="true"  />
+				<xs:element name="MinimalnePrihodenie" type="xs:string" nillable="true"  />
+
+				<xs:element name="Zabezpeka" nillable="true" >
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Vyska" type="xs:string" />
+							<xs:element name="ZlozenieSposob" type="xs:string" />
+							<xs:element name="ZlozenieDoklad" type="xs:string" />
+							<xs:element name="ZlozenieLehota" type="xs:string" />
+							<xs:element name="Vratenie" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="SposobUhradyCeny" type="xs:string" nillable="true"  />
+				<xs:element name="ObhliadkaDatum" type="xs:string" nillable="true"  />
+				<xs:element name="ObhliadkaMiesto" type="xs:string" nillable="true"  />
+				
+				<xs:element name="OrganizaceOpatrenia" type="xs:string" nillable="true"  />
+				<xs:element name="NadobudnutieVlastnickehoPrava" type="xs:string" nillable="true" />
+				
+				<xs:element name="DovodUpustenia" type="xs:string" nillable="true" />
+				<xs:element name="DrazobnikOznamuje" type="xs:string" nillable="true" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

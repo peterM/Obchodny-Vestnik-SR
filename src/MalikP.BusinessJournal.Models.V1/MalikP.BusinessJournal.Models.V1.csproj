@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C596705-1140-4DFE-B2E8-821DFF2F3642}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MalikP.BusinessJournal.Models.V1</RootNamespace>
+    <AssemblyName>MalikP.BusinessJournal.Models.V1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drazba\Drazba.cs">
+      <DependentUpon>Drazba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\DrazbaLicitator.cs">
+      <SubType>code</SubType>
+      <DependentUpon>Drazba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\DrazbaNavrhovatel.cs">
+      <SubType>code</SubType>
+      <DependentUpon>Drazba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\DrazbaNotar.cs">
+      <SubType>code</SubType>
+      <DependentUpon>Drazba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\DrazbaSpravcaDane.cs">
+      <DependentUpon>DrazbaSpravcaDane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\DrazbaZabezpeka.cs">
+      <SubType>code</SubType>
+      <DependentUpon>Drazba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudniExekutori.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutor.cs">
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorHlavicka.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorHlavickaDrazba_miesto.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorHlavickaExekutor.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorHlavickaOhliadka.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorHlavickaVlastnik.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorHlavickaZastupujuci_exekutor.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorOprava_udajov.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorPredmet_drazby.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorPredmet_drazbyOznacenie_nehnutelnosti.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorPredmet_drazbyParcela.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Drazba\SudnyExekutorPredmet_drazbyStavba.cs">
+      <SubType>code</SubType>
+      <DependentUpon>SudnyExekutor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekucii.cs">
+      <DependentUpon>00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekuciiExecutor.cs">
+      <DependentUpon>00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekuciiExecutorContact.cs">
+      <DependentUpon>00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekuciiExecutorPhysicalAddress.cs">
+      <DependentUpon>00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekuciiObligatory.cs">
+      <DependentUpon>00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekuciiObligatoryObligatoryPhysicalAddress.cs">
+      <DependentUpon>00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exekucie\UpovedomeniaExekutorov\MSSR_OV_Upovedomenie_o_exekuciiOther.cs">
+      <DependentUpon>00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\EmisnePodmienkyDlhopisov.cs">
+      <DependentUpon>EmisnePodmienkyDlhopisov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\EmisnePodmienkyDlhopisovEmitentCudzozemecPO.cs">
+      <DependentUpon>EmisnePodmienkyDlhopisov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\EmisnePodmienkyDlhopisovEmitentTuzemecFO.cs">
+      <DependentUpon>EmisnePodmienkyDlhopisov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\EmisnePodmienkyDlhopisovZmeny.cs">
+      <DependentUpon>EmisnePodmienkyDlhopisovZmeny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\EmisnePodmienkyDlhopisovZmenyEmitentCudzozemecPO.cs">
+      <DependentUpon>EmisnePodmienkyDlhopisovZmeny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\EmisnePodmienkyDlhopisovZmenyEmitentTuzemecFO.cs">
+      <DependentUpon>EmisnePodmienkyDlhopisovZmeny.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\HospodarenieSpravaPodielovyFond.cs">
+      <DependentUpon>HospodarenieSpravaPodielovyFond.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\MenoPriezvisko.cs">
+      <SubType>code</SubType>
+      <DependentUpon>VyhlaskySudov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\PredajMajetkuLividator.cs">
+      <DependentUpon>PredajMajetkuLividator.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\PredajMajetkuLividatorLividatorFO.cs">
+      <DependentUpon>PredajMajetkuLividator.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\PredajMajetkuLividatorLividatorPO.cs">
+      <DependentUpon>PredajMajetkuLividator.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\PredajMajetkuLividatorSpolocnost.cs">
+      <DependentUpon>PredajMajetkuLividator.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\PredajMajetkuSpravca.cs">
+      <DependentUpon>PredajMajetkuSpravca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\PredajMajetkuSpravcaSpravcaPO.cs">
+      <DependentUpon>PredajMajetkuSpravca.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\RozhodnutiaOPrivatizacii.cs">
+      <DependentUpon>RozhodnutiaOPrivatizacii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\StatnaPomocIneProgramyPodpory.cs">
+      <DependentUpon>StatnaPomocIneProgramyPodpory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\TransformacneProjekty.cs">
+      <DependentUpon>TransformacneProjekty.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\UpisovanieAkcii.cs">
+      <DependentUpon>UpisovanieAkcii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\UpisovanieAkciiUplatneniePrava.cs">
+      <DependentUpon>UpisovanieAkcii.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\ValneZhromazdenie.cs">
+      <DependentUpon>ValneZhromazdenie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\VerejnaSutaz.cs">
+      <DependentUpon>VerejnaSutaz.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\VerejnaSutazVyhlasovatelFO.cs">
+      <SubType>code</SubType>
+      <DependentUpon>VerejnaSutaz.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\VerejnaSutazVyhlasovatelPO.cs">
+      <SubType>code</SubType>
+      <DependentUpon>VerejnaSutaz.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\VyhlaskySudov.cs">
+      <DependentUpon>VyhlaskySudov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\VyrocnaSprava.cs">
+      <DependentUpon>VyrocnaSprava.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Ine\VyrokAuditora.cs">
+      <DependentUpon>VyrokAuditora.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzARestrukt.cs">
+      <DependentUpon>KonkurzARestrukt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzARestruktAutor.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzARestrukt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzARestruktDlznik.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzARestrukt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzARestruktNavrhovatel.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzARestrukt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzARestruktSpravca.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzARestrukt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzARestruktText.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzARestrukt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzyAVyrovnania.cs">
+      <DependentUpon>KonkurzyAVyrovnania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzyAVyrovnaniaKrajskySud.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzyAVyrovnania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzyAVyrovnaniaSidlo.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzyAVyrovnania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\KonkurzyAVyrovnaniaZverejnujeTyp.cs">
+      <SubType>code</SubType>
+      <DependentUpon>KonkurzyAVyrovnania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\OznameniaSpravcov.cs">
+      <DependentUpon>OznameniaSpravcov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\OznameniaSpravcovDruhPodania.cs">
+      <SubType>code</SubType>
+      <DependentUpon>OznameniaSpravcov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\OznameniaSpravcovSpravca.cs">
+      <SubType>code</SubType>
+      <DependentUpon>OznameniaSpravcov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Konkurz\OznameniaSpravcovUpadca.cs">
+      <SubType>code</SubType>
+      <DependentUpon>OznameniaSpravcov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oprava\OpravaZrusenie.cs">
+      <DependentUpon>OpravaZrusenie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oprava\OpravaZrusenieVyhlasovatelFO.cs">
+      <SubType>code</SubType>
+      <DependentUpon>OpravaZrusenie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oprava\OpravaZrusenieVyhlasovatelPO.cs">
+      <SubType>code</SubType>
+      <DependentUpon>OpravaZrusenie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OR\ORPodania.cs">
+      <DependentUpon>ORPodanie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OR\ORPodanie.cs">
+      <DependentUpon>ORPodanie.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\CennePapiere.cs">
+      <DependentUpon>CennePapiere.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\CennePapiereIneOznamenie.cs">
+      <DependentUpon>CennePapiere.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\CennePapierePredlozenieVratenie.cs">
+      <DependentUpon>CennePapiere.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\CennePapiereVyzdvihnutie.cs">
+      <DependentUpon>CennePapiere.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\CennePapiereZmenaPodoby.cs">
+      <DependentUpon>CennePapiere.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\EuropskeZoskupenieUzemnejSpoluprace.cs">
+      <DependentUpon>EuropskeZoskupenieUzemnejSpoluprace.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\OdobratiePovolenia.cs">
+      <DependentUpon>OdobratiePovolenia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\OdsudzujuciRozsudok.cs">
+      <DependentUpon>OdsudzujuciRozsudok.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\OznamenieIne.cs">
+      <DependentUpon>OznamenieIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\OznamenieIneSpolocnost.cs">
+      <DependentUpon>OznamenieIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\OznamenieSpravcovskejSpolocnosti.cs">
+      <DependentUpon>OznamenieSpravcovskejSpolocnosti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZlucenieSplynutieProjektuZbierkyListin.cs">
+      <DependentUpon>ZlucenieSplynutieProjektuZbierkyListin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZlucenieZbierkyListin.cs">
+      <DependentUpon>ZlucenieZbierkyListin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZmenaPravnejFormy.cs">
+      <DependentUpon>ZmenaPravnejFormy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZmenaPravnejFormyKonatel.cs">
+      <DependentUpon>ZmenaPravnejFormy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZmenaPravnejFormyPrveZverejnenieOV.cs">
+      <DependentUpon>ZmenaPravnejFormy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZmenaPravnejFormyZmenaNa.cs">
+      <DependentUpon>ZmenaPravnejFormy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZmenaPravnejFormyZmenaZ.cs">
+      <DependentUpon>ZmenaPravnejFormy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZmenaPravnejFormyZmenaZZakladneImanie.cs">
+      <DependentUpon>ZmenaPravnejFormy.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZnizenieZakladnehoImania.cs">
+      <DependentUpon>ZnizenieZakladnehoImania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZnizenieZakladnehoImaniaKonatel.cs">
+      <DependentUpon>ZnizenieZakladnehoImania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZnizenieZakladnehoImaniaPrveZverejnenieOV.cs">
+      <DependentUpon>ZnizenieZakladnehoImania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZnizenieZakladnehoImaniaZakladneImanieZ.cs">
+      <DependentUpon>ZnizenieZakladnehoImania.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZverejnenieZriadovatela.cs">
+      <DependentUpon>ZverejnenieZriadovatela.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZverejnenieZriadovatelaRozhodca.cs">
+      <DependentUpon>ZverejnenieZriadovatela.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZverejnenieZriadovatelaZriadovatel.cs">
+      <DependentUpon>ZverejnenieZriadovatela.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZverejnenieZriadovatelaZriadovatelZriadovatelFO.cs">
+      <DependentUpon>ZverejnenieZriadovatela.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oznamenie\ZverejnenieZriadovatelaZriadovatelZriadovatelPO.cs">
+      <DependentUpon>ZverejnenieZriadovatela.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieOznamenieOrganuVerejnejMoci.cs">
+      <DependentUpon>RozhodnutieOznamenieOrganuVerejnejMoci.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieOznamenieOrganuVerejnejMociBanskyUrad.cs">
+      <DependentUpon>RozhodnutieOznamenieOrganuVerejnejMoci.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieProtimonopolnyUrad.cs">
+      <DependentUpon>RozhodnutieProtimonopolnyUrad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieProtimonopolnyUradPravoplatneRozhodnutie.cs">
+      <DependentUpon>RozhodnutieProtimonopolnyUrad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpecifikaciaPrijatehoPodieluDane\ZverejneniePouzitiaPrijatehoPodieluDane.cs">
+      <DependentUpon>ZverejneniePouzitiaPrijatehoPodieluDane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpecifikaciaPrijatehoPodieluDane\ZverejneniePouzitiaPrijatehoPodieluDanePouzitie.cs">
+      <DependentUpon>ZverejneniePouzitiaPrijatehoPodieluDane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpecifikaciaPrijatehoPodieluDane\ZverejneniePouzitiaPrijatehoPodieluDanePrijimatel.cs">
+      <DependentUpon>ZverejneniePouzitiaPrijatehoPodieluDane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpecifikaciaPrijatehoPodieluDane\ZverejneniePouzitiaPrijatehoPodieluDanePrijimatelPravnaForma.cs">
+      <DependentUpon>ZverejneniePouzitiaPrijatehoPodieluDane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpecifikaciaPrijatehoPodieluDane\ZverejneniePouzitiaPrijatehoPodieluDaneSumaMena.cs">
+      <DependentUpon>ZverejneniePouzitiaPrijatehoPodieluDane.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikatelia.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaHlavicka.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaHlavickaSidlo.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaHlavickaSuvahaFormular.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaHlavickaVSuma.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaHlavickaZverejnuje.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaRiadokJU.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaRiadokPU.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaNepodnikateliaSekciaPU.cs">
+      <DependentUpon>UctovnaZavierkaNepodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikatelia.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaHlavicka.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaHlavickaNazorAuditora.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaHlavickaSidlo.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaHlavickaSuvahaFormular.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaHlavickaVSuma.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaHlavickaZverejnuje.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaIne.cs">
+      <DependentUpon>UctovnaZavierkaPodnikateliaIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaIneHlavicka.cs">
+      <DependentUpon>UctovnaZavierkaPodnikateliaIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaIneHlavickaNazorAuditora.cs">
+      <DependentUpon>UctovnaZavierkaPodnikateliaIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaIneHlavickaSidlo.cs">
+      <DependentUpon>UctovnaZavierkaPodnikateliaIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaIneHlavickaVSuma.cs">
+      <DependentUpon>UctovnaZavierkaPodnikateliaIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaIneHlavickaZverejnuje.cs">
+      <DependentUpon>UctovnaZavierkaPodnikateliaIne.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaRiadok.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaRiadok1.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaRiadok2.cs">
+      <DependentUpon>UctovnaZavierkaPodnikatelia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UdajeZRegistraRegUradov\UdajZRegistraRegistrovychUradov.cs">
+      <DependentUpon>UdajZRegistraRegistrovychUradov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\LikvidatorDodatocnyFO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\LikvidatorFO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorov.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocna.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocnaLikvidatori.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocnaLikvidatoriLikvidatorPO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocnaPodnik.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocnaPohladavkyAdresaFO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocnaPohladavkyAdresaPO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocnaRozhodnutie.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorovDodatocna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovLikvidatori.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovLikvidatoriLikvidatorPO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovPodnik.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovPohladavkyAdresaFO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovPohladavkyAdresaPO.cs">
+      <DependentUpon>OznamenieVyzvaLikvidatorov.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zmluva\OVZmluva.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaDodatok.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaDodatokPravnyRezim.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaDodatokStav.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaDodavatel.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaDodavatelPravnaForma.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaDodavatelSudRegistracie.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaOdberatel.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaOdberatelPravnaForma.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaOdberatelSudRegistracie.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaOstatne.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaOstatneObchodneTajomstvo.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaOstatneSposobObstaravania.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaOstatneZavazneZnenie.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaVseobecne.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaVseobecneHodnotaPlneniaDph.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaVseobecneHodnotaPlneniaMena.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaZmluva.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaZmluvaDruh.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaZmluvaPravnyRezim.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaZmluvaStav.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\OVZmluvaZmluvaTyp.cs">
+      <DependentUpon>OVZmluva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Zmluva\ZmluvaInformaciaUzavretie.cs">
+      <DependentUpon>ZmluvaInformaciaUzavretie.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Drazba\Drazba.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Drazba\DrazbaSpravcaDane.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Drazba\SudnyExekutor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Exekucie\UpovedomeniaExekutorov\00166073.MSSR_OV_Upovedomenie_o_exekucii.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\EmisnePodmienkyDlhopisov.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\EmisnePodmienkyDlhopisovZmeny.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\HospodarenieSpravaPodielovyFond.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\PredajMajetkuLividator.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\PredajMajetkuSpravca.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\RozhodnutiaOPrivatizacii.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\StatnaPomocIneProgramyPodpory.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\TransformacneProjekty.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\UpisovanieAkcii.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\ValneZhromazdenie.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\VerejnaSutaz.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\VyhlaskySudov.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\VyrocnaSprava.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Ine\VyrokAuditora.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Konkurz\KonkurzARestrukt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Konkurz\KonkurzyAVyrovnania.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Konkurz\OznameniaSpravcov.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oprava\OpravaZrusenie.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OR\ORPodanie.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\CennePapiere.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\EuropskeZoskupenieUzemnejSpoluprace.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\OdobratiePovolenia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\OdsudzujuciRozsudok.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\OznamenieIne.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\OznamenieSpravcovskejSpolocnosti.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\ZlucenieSplynutieProjektuZbierkyListin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\ZlucenieZbierkyListin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\ZmenaPravnejFormy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\ZnizenieZakladnehoImania.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oznamenie\ZverejnenieZriadovatela.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieOznamenieOrganuVerejnejMoci.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RozhodnutieOznamenieOrganuVerejnejMoci\RozhodnutieProtimonopolnyUrad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpecifikaciaPrijatehoPodieluDane\ZverejneniePouzitiaPrijatehoPodieluDane.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UctovnaZavierka\UctovnaZavierkaNepodnikatelia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UctovnaZavierka\UctovnaZavierkaPodnikatelia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UctovnaZavierka\UctovnaZavierkaPodnikateliaIne.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UdajeZRegistraRegUradov\UdajZRegistraRegistrovychUradov.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorov.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VyzvaLikvidatorov\OznamenieVyzvaLikvidatorovDodatocna.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Zmluva\OVZmluva.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Zmluva\ZmluvaInformaciaUzavretie.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MalikP.BusinessJournal.Models.Common\MalikP.BusinessJournal.Models.Common.csproj">
+      <Project>{5f8d30a4-8447-4dec-ade2-68d2bcf32963}</Project>
+      <Name>MalikP.BusinessJournal.Models.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
